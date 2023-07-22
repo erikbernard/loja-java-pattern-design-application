@@ -16,7 +16,7 @@ public class GerarPedidoHandler {
 
     // metodo que recebe o comando
     public void execute(GeraPedido dados) {
-        var orcamento = new Orcamento(dados.getValorOrcamento(), dados.getQuantidadeItens());
+        var orcamento = new Orcamento();
         var pedido = new Pedido(dados.getCliente(), LocalDateTime.now(), orcamento);
         System.out.println("Pedido: " + pedido.getCliente() + " " + pedido.getOrcamento());
 

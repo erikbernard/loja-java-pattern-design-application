@@ -16,7 +16,7 @@ public class GeraPedido {
         this.quantidadeItens = quantidadeItens;
     }
     public void executar() {
-        var orcamento = new Orcamento(valorOrcamento, quantidadeItens);
+        var orcamento = new Orcamento();
         var pedido = new Pedido(cliente, LocalDateTime.now(), orcamento);
         System.out.println("Pedido: " + pedido.getCliente() + " " + pedido.getOrcamento());
     }
